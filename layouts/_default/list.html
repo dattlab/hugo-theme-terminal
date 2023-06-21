@@ -37,9 +37,7 @@
           {{ if .Params.showFullContent }}
             {{ .Content }}
           {{ else if .Description }}
-            {{ .Description | markdownify }}
-          {{ else }}
-            {{ .Summary }}
+            {{ . | markdownify }}
           {{ end }}
         </div>
 
